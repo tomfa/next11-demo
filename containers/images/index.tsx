@@ -34,7 +34,9 @@ export default function ImagePage() {
         <li>Loaded in a dimension that suitable for the viewport</li>
         <li>Compressed by a customizable amount (default: 75/100)</li>
         <li>Lazy loaded as you scroll</li>
-        <li>To reduce build time, compressed on 1st demand (can be specified)</li>
+        <li>
+          To reduce build time, compressed on 1st demand (can be specified)
+        </li>
       </ul>
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div
@@ -73,7 +75,7 @@ export default function ImagePage() {
             flex: 1,
             justifyContent: "center",
             alignItems: "center",
-            textAlign: 'right'
+            textAlign: "right",
           }}
         >
           <p>Here's some lorem ipsum that is related to the dog on the left.</p>
@@ -86,6 +88,31 @@ export default function ImagePage() {
         placeholder={"blur"}
         layout={"responsive"}
       />
+      <h3>Externally hosted images</h3>
+      <p>
+        Externally hosted images must have their (original) height and width
+        specified to prevent cummulative shift. Also these images can be
+        compressed on the fly, if their domain is allowed in next.config.js
+      </p>
+      <Image
+        src={"https://unsplash.com/photos/NodtnCsLdTE/download?force=true"}
+        alt={"External cat image"}
+        width={"5042"}
+        height={"3151"}
+        layout={"responsive"}
+      />
+      <div
+        style={{
+          width: "100%",
+          height: "500px",
+          background: "#d79f3a",
+          alignItems: "center",
+          justifyContent: "center",
+          display: "flex",
+        }}
+      >
+        <p>Dummy text just here to highlight shift</p>
+      </div>
     </Section>
   );
 }
