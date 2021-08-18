@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.error {
+  color: darkred;
+  border-color: darkred;
+  background-color: rgba(255,55,20,0.43);
+}
