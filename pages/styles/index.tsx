@@ -3,21 +3,14 @@ import styles from "../../components/Button.module.scss";
 import otherStyles from "../../components/OtherButton.module.css";
 import { useTheme } from "next-themes";
 import Intro from "../../components/Intro";
-import Link from "next/link";
 import IntroLink from "../../components/IntroLink";
+import Section from "../../components/Section";
 
 const Index: NextPage = () => {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   return (
-    <section
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        maxWidth: "350px",
-        padding: "20px",
-      }}
-    >
+    <Section>
       <h2>Styles</h2>
       <Intro>
         NextJS comes with Built-In CSS support for global and moduled CSS. With
@@ -68,7 +61,7 @@ const Index: NextPage = () => {
       </button>
       <hr />
       <button className={styles.primary}>Themed button</button>
-    </section>
+    </Section>
   );
 };
 
