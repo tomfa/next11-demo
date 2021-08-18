@@ -28,6 +28,13 @@ a {
   text-decoration: none;
 }
 
+h2, h3 {
+  margin-top: 40px;
+}
+h3 + p {
+  margin-top: 0;
+}
+
 * {
   box-sizing: border-box;
 }
