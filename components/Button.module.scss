@@ -1,0 +1,18 @@
+/*
+You do not need to worry about .error {} colliding with any other `.css` or
+`.module.css` files!
+*/
+$color-error: red;
+
+.highlightedText {
+  background-color: orange;
+}
+
+.error {
+  color: white;
+  background-color: $color-error;
+
+  > .highlightedText {
+    background-color: pink
+  }
+}
